@@ -38,17 +38,20 @@ Here are the variables concerned and a brief explanation of what they are for :
 
 Some variables should be host_vars; these are mainly variables used to access BIGIP appliances.
 
-# Ansible connection type variable
 > ansible_connection: local
 
-# BIGIP user used to manage the device using Ansible
-> f5_user: admin
+> f5_user: ansible
 
-# BIGIP user's password used to maange the device using Ansible
+This variable contains the user used to access F5 appliance
+
 > f5_passwd: password
 
-# BIGIP IP address used to manage the device using Ansible
+This variable contains the password used to access F5 appliance.
+Use ansible vault or another vault for security reason.
+
 > f5_host: 1.1.1.1
+
+This variable contains the IP address or hostname of the bigip.
 
 Others variables required in the role are variables used for the main purpose of this role.
 Here is the list of these variables : 
