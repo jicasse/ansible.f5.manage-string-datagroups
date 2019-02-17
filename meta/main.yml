@@ -22,4 +22,4 @@ galaxy_info:
    - datagroup
 
 dependencies:
- - jicasse.ansible.f5.get-ha-status
+ - jicasse.ansible_f5_get_ha_status  
