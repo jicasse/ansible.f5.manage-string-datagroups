@@ -14,6 +14,10 @@ These datagroups can be used for what you want :
 - defining flags for specific needs
 - ...
 
+Another important information : currently `ansible.f5.get-ha-status` is required as it is used to check if the appliance is standalone or in cluster. 
+If the appliances are in cluster, the configuration will only be done if the appliance is master. 
+In that, case, at the end a handler is called to sync the configuration to peer appliance.
+
 Requirements
 ------------
 
@@ -106,9 +110,10 @@ Here is the playbook example :
          - ansible.f5.get-ha-status 
          - ansible.f5.manage-string-datagroups
 
-If your irule has been done to retrieve content of a datagroup named `<virtual server name>_debug-logging` to check `remote_logging` and `local_logging` flags, you will be able to enable or disable logging without changing irules content.
+If your irule has been done to retrieve content of a datagroup named `<virtual server name>_debug-logging` to check `remote_logging` and `local_logging` flags, you will be able to enable or disable logging without changing irules content. If you need to change the logging flags value, just change the value in the variable, push the configuration.
 
 This is a simple use case; I let you imagine what you can do by doing generic/standard irules which are using datagroups named `<virtual server name>_<suffix>`
+
 
 License
 -------
