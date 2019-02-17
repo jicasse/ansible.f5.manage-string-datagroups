@@ -1,0 +1,6 @@
+---
+- hosts: f5_dev
+  gather_facts: no
+  roles:
+    - ansible.f5.get-ha-status 
+    - ansible.f5.manage-string-datagroups 

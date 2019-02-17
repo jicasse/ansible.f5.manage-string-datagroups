@@ -1,0 +1,12 @@
+---
+# Ansible connection type variable
+ansible_connection: local
+
+# BIGIP user used to manage the device using Ansible
+f5_user: ansible
+
+# BIGIP user's password used to maange the device using Ansible
+f5_passwd: password
+
+# BIGIP IP address used to manage the device using Ansible
+f5_host: 1.1.1.1 

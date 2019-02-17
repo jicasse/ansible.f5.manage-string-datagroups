@@ -1,0 +1,8 @@
+[f5_dev]
+f5_lab
+
+[f5_prod]
+
+[all:children]
+f5_dev
+f5_prod

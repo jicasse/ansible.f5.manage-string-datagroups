@@ -1,0 +1,25 @@
+galaxy_info:
+  author: Jimmy Casse 
+  description: Ansible role used to manage string datagroups 
+  company: J-SEC
+
+  license: license BSD 
+
+  min_ansible_version: 2.7
+
+  platforms:
+   - name: EL
+     versions:
+     - all
+   - name: Debian
+     versions:
+     - all
+
+  galaxy_tags:
+   - f5
+   - bigip
+   - networking
+   - datagroup
+
+dependencies:
+ - jicasse.ansible.f5.get-ha-status

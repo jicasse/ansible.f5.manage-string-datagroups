@@ -1,0 +1,16 @@
+---
+- name: Ensure datagroups exist with expected content
+  bigip_data_group:
+    provider:
+     server: "{{ f5_host }}"
+     user: "{{ f5_user }}"
+     password: "{{ f5_passwd }}"
+     validate_certs: "{{ f5_validate_certs }}"
+    state: present
+    internal: yes
+    name: "{{ vs_name }}_{{ item.suffix }}"
+    type: string
+    records_src: "../files/{{ vs_name }}_{{ item.suffix }}"
+  delegate_to: "{{ f5_delegate_to }}"
+  loop: "{{ datagroups }}"
+  notify: config sync
