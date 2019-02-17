@@ -83,7 +83,7 @@ Example Playbook
 
 Here is a simple example of a playbook using this role and a use case : 
 
-Imagine you have an irule used to do some things but you needs to enable or disable logging (local or hsl logging) without modifying the irule.
+Imagine you have an irule used to do some things but you need to enable or disable logging (local or hsl logging) without modifying the irule.
 You can imagine an irule using a datagroup with flags for remote and local logging. 
 
 To do that you can have the following variables for your hosts : 
@@ -95,6 +95,7 @@ To do that you can have the following variables for your hosts :
                    { key: 'remote_logging', value: '0' }] 
        }
 By using the simple playbook example below, at the end you'll have datagroups named `myvirtualserver_debug-logging` with the following content:
+
     local_logging := '1'
     remote_logging := '0'
 
