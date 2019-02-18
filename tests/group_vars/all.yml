@@ -1,8 +1,7 @@
 ---
-# VS name on which the configuration will be applied
 vs_name: 'myvirtualserver'
 datagroups:
  - { suffix: "debug-logging", 
-     content: [{ key: 'local_logging', value: '1' }, 
-               { key: 'remote_logging', value: '0' }] 
+     content: [{ key: 'local_logging', value: '0' }, 
+               { key: 'remote_logging', value: '0' }]
    }

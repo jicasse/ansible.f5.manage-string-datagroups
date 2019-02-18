@@ -3,10 +3,10 @@
 ansible_connection: local
 
 # BIGIP user used to manage the device using Ansible
-f5_user: ansible
+f5_user: admin
 
 # BIGIP user's password used to maange the device using Ansible
-f5_passwd: password
+f5_passwd: admin123
 
 # BIGIP IP address used to manage the device using Ansible
-f5_host: 1.1.1.1 
+f5_host: 10.0.0.135 
