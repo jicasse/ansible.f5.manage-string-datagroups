@@ -1,6 +1,6 @@
 ---
 - name: Preparing datagroups content
   template:
-   src: "../templates/datagroup.j2"
-   dest: "/tmp/{{ vs_name }}_{{ item.suffix }}"
+   src: "{{ role_path }}/templates/datagroup.j2"
+   dest: "{{ role_path }}/files/{{ vs_name }}_{{ item.suffix }}"
   loop: "{{ datagroups }}"

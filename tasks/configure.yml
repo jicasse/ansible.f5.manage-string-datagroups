@@ -10,7 +10,7 @@
     internal: yes
     name: "{{ vs_name }}_{{ item.suffix }}"
     type: string
-    records_src: "/tmp/{{ vs_name }}_{{ item.suffix }}"
+    records_src: "{{ role_path }}/files/{{ vs_name }}_{{ item.suffix }}"
   delegate_to: "{{ f5_delegate_to }}"
   loop: "{{ datagroups }}"
   notify: config sync
